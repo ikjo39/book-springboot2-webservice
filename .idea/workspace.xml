@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36fdb8dc-8004-461a-bd04-1584dd44d878" name="변경" comment="ch8 이전 내용">
+    <list default="true" id="36fdb8dc-8004-461a-bd04-1584dd44d878" name="변경" comment="ch8.4 기반 수정">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,7 +146,7 @@
       <recent name="com.jojoldu.book.springboot.web.dto" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.springboot2-webservice.test의 전부">
+  <component name="RunManager" selected="JUnit.springboot2-webservice.test의 전부 (1)">
     <configuration name="springboot2-webservice [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -185,22 +184,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PostsApiControllerTest.Ports_수정된다" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="springboot2-webservice.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.jojoldu.book.springboot.web.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.jojoldu.book.springboot.web" />
-      <option name="MAIN_CLASS_NAME" value="com.jojoldu.book.springboot.web.PostsApiControllerTest" />
-      <option name="METHOD_NAME" value="Ports_수정된다" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="PostsRepositoryTest.BaseTimeEntity_등록" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="springboot2-webservice.test" />
       <extension name="coverage">
@@ -213,6 +196,14 @@
       <option name="MAIN_CLASS_NAME" value="com.jojoldu.book.springboot.domain.posts.PostsRepositoryTest" />
       <option name="METHOD_NAME" value="BaseTimeEntity_등록" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="springboot2-webservice.test의 전부 (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springboot2-webservice.test" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -234,11 +225,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.springboot2-webservice.test의 전부 (1)" />
         <item itemvalue="JUnit.springboot2-webservice.test의 전부" />
         <item itemvalue="Gradle.springboot2-webservice [test]" />
         <item itemvalue="JUnit.IndexControllerTest.메인페이지_로딩" />
         <item itemvalue="JUnit.PostsRepositoryTest.BaseTimeEntity_등록" />
-        <item itemvalue="JUnit.PostsApiControllerTest.Ports_수정된다" />
       </list>
     </recent_temporary>
   </component>
@@ -271,7 +262,7 @@
       <workItem from="1667469594936" duration="8573000" />
       <workItem from="1667526565568" duration="755000" />
       <workItem from="1667533154198" duration="3055000" />
-      <workItem from="1667537047687" duration="991000" />
+      <workItem from="1667537047687" duration="1830000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1667116051764</created>
@@ -301,7 +292,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667534216779</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="ch8.4 기반 수정">
+      <created>1667538126114</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1667538126114</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -335,7 +333,8 @@
     <MESSAGE value="gitignore 등록" />
     <MESSAGE value="gitignore 등록2" />
     <MESSAGE value="ch8 이전 내용" />
-    <option name="LAST_COMMIT_MESSAGE" value="ch8 이전 내용" />
+    <MESSAGE value="ch8.4 기반 수정" />
+    <option name="LAST_COMMIT_MESSAGE" value="ch8.4 기반 수정" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
