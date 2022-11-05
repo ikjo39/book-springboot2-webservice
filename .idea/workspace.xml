@@ -4,20 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36fdb8dc-8004-461a-bd04-1584dd44d878" name="변경" comment="ch8.4 기반 수정">
+    <list default="true" id="36fdb8dc-8004-461a-bd04-1584dd44d878" name="변경" comment="Gradle 6.7.1 업그레이드">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/jojoldu/book/springboot/domain/posts/PostsRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/jojoldu/book/springboot/domain/posts/PostsRepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/jojoldu/book/springboot/web/HelloControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/jojoldu/book/springboot/web/HelloControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/jojoldu/book/springboot/web/IndexControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/jojoldu/book/springboot/web/IndexControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/jojoldu/book/springboot/web/PostsApiControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/jojoldu/book/springboot/web/PostsApiControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/jojoldu/book/springboot/web/dto/HelloResponseDtoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/jojoldu/book/springboot/web/dto/HelloResponseDtoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -276,7 +264,9 @@
       <workItem from="1667533154198" duration="3055000" />
       <workItem from="1667537047687" duration="1830000" />
       <workItem from="1667542842210" duration="2146000" />
-      <workItem from="1667571822176" duration="2220000" />
+      <workItem from="1667571822176" duration="2375000" />
+      <workItem from="1667619737776" duration="7000" />
+      <workItem from="1667650235955" duration="619000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1667116051764</created>
@@ -327,7 +317,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667544277887</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Gradle 6.7.1 업그레이드">
+      <created>1667574306989</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1667574306989</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -362,7 +359,8 @@
     <MESSAGE value="gitignore 등록2" />
     <MESSAGE value="ch8 이전 내용" />
     <MESSAGE value="ch8.4 기반 수정" />
-    <option name="LAST_COMMIT_MESSAGE" value="ch8.4 기반 수정" />
+    <MESSAGE value="Gradle 6.7.1 업그레이드" />
+    <option name="LAST_COMMIT_MESSAGE" value="Gradle 6.7.1 업그레이드" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
