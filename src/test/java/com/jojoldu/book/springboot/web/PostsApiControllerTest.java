@@ -76,7 +76,7 @@ public class PostsApiControllerTest {
 
         // when
         mvc.perform(post(url) // mvc.perform - 생성된 MockMvc를 통해 APi를 테스트 -> ObjectMapper를 통해 문자열 JSON으로 변환함
-                .contentType(MediaType.APPLICATION_JSON_UTF8)
+                .contentType(MediaType.APPLICATION_JSON)
                         .content(new ObjectMapper().writeValueAsString(requestDto)))
                                 .andExpect(status().isOk());
 
@@ -117,7 +117,7 @@ public class PostsApiControllerTest {
 
         // when
         mvc.perform(put(url)
-                .contentType(MediaType.APPLICATION_JSON_UTF8)
+                .contentType(MediaType.APPLICATION_JSON)
                         .content(new ObjectMapper().writeValueAsString(requestDto)))
                 .andExpect(status().isOk());
         // then
