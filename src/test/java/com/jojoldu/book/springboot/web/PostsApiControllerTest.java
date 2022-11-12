@@ -13,7 +13,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.boot.web.server.LocalServerPort;
-import org.springframework.http.HttpEntity;
 import org.springframework.http.MediaType;
 import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
@@ -28,6 +27,8 @@ import static org.springframework.security.test.web.servlet.setup.SecurityMockMv
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
+// For mockMvc
 
 @ExtendWith(SpringExtension.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
@@ -47,7 +48,7 @@ public class PostsApiControllerTest {
 
     private MockMvc mvc;
 
-    @BeforeEach // 매번 테스트가 실행 전 MockMvc 인스턴스를 생성함
+    @BeforeEach
     public void setup() {
         mvc = MockMvcBuilders
                 .webAppContextSetup(context)
@@ -61,9 +62,9 @@ public class PostsApiControllerTest {
     }
 
     @Test
-    @WithMockUser(roles = "USER")
+    @WithMockUser(roles="USER")
     public void Posts_등록된다() throws Exception {
-        // given
+        //given
         String title = "title";
         String content = "content";
         PostsSaveRequestDto requestDto = PostsSaveRequestDto.builder()
@@ -74,35 +75,29 @@ public class PostsApiControllerTest {
 
         String url = "http://localhost:" + port + "/api/v1/posts";
 
-        // when
-        mvc.perform(post(url) // mvc.perform - 생성된 MockMvc를 통해 APi를 테스트 -> ObjectMapper를 통해 문자열 JSON으로 변환함
-                .contentType(MediaType.APPLICATION_JSON)
+        //when
+        mvc.perform(post(url)
+                        .contentType(MediaType.APPLICATION_JSON)
                         .content(new ObjectMapper().writeValueAsString(requestDto)))
-                                .andExpect(status().isOk());
+                .andExpect(status().isOk());
 
-        // then
-
+        //then
         List<Posts> all = postsRepository.findAll();
         assertThat(all.get(0).getTitle()).isEqualTo(title);
         assertThat(all.get(0).getContent()).isEqualTo(content);
     }
 
-    /*
-     *       @WebMvcTest는 JPA 기능이 작동하지 않음
-     *       Controller ControllerAdvice 등 외부 연동과 관련된 부분만 활성화 되니
-     *       JPA 까지 한번에 하려면 @SpringBootTest와 TestRestTemplate를 사용하면 됨
-     * */
     @Test
-    @WithMockUser(roles = "USER")   // 인증된 가짜 사용자를 만듬 - roles에 권한 추가 가능 - 어노테이션으로 ROLE_USER 권한을 가진
-    public void Ports_수정된다() throws Exception {
-        // given
-        Posts savedPorts = postsRepository.save(Posts.builder()
+    @WithMockUser(roles="USER")
+    public void Posts_수정된다() throws Exception {
+        //given
+        Posts savedPosts = postsRepository.save(Posts.builder()
                 .title("title")
                 .content("content")
                 .author("author")
                 .build());
 
-        Long updatedId = savedPorts.getId();
+        Long updateId = savedPosts.getId();
         String expectedTitle = "title2";
         String expectedContent = "content2";
 
@@ -111,20 +106,17 @@ public class PostsApiControllerTest {
                 .content(expectedContent)
                 .build();
 
-        String url = "http://localhost:" + port + "/api/v1/posts/" + updatedId;
+        String url = "http://localhost:" + port + "/api/v1/posts/" + updateId;
 
-        HttpEntity<PostsUpdateRequestDto> requestEntity = new HttpEntity<>(requestDto);
-
-        // when
+        //when
         mvc.perform(put(url)
-                .contentType(MediaType.APPLICATION_JSON)
+                        .contentType(MediaType.APPLICATION_JSON)
                         .content(new ObjectMapper().writeValueAsString(requestDto)))
                 .andExpect(status().isOk());
-        // then
 
+        //then
         List<Posts> all = postsRepository.findAll();
         assertThat(all.get(0).getTitle()).isEqualTo(expectedTitle);
         assertThat(all.get(0).getContent()).isEqualTo(expectedContent);
     }
 }
-
