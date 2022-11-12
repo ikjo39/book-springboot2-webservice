@@ -16,14 +16,14 @@ before_install:
   - chmod +x gradlew
 
 before_script:
-  - cd springboot2-webservice/
+  - cd book-springboot2-webservice/
 
 script: "./gradlew clean build"
 
 before_deploy:
-  - zip -r springboot2-webservice *
+  - zip -r book-springboot2-webservice *
   - mkdir -p deploy
-  - mv springboot2-webservice.zip deploy/springboot2-webservice.zip
+  - mv book-springboot2-webservice.zip deploy/book-springboot2-webservice.zip
 
 deploy:
   - provider: s3
