@@ -77,7 +77,7 @@ public class PostsApiControllerTest {
 
         //when
         mvc.perform(post(url)
-                        .contentType(MediaType.APPLICATION_JSON)
+                        .contentType(MediaType.APPLICATION_JSON_UTF8)
                         .content(new ObjectMapper().writeValueAsString(requestDto)))
                 .andExpect(status().isOk());
 
@@ -110,7 +110,7 @@ public class PostsApiControllerTest {
 
         //when
         mvc.perform(put(url)
-                        .contentType(MediaType.APPLICATION_JSON)
+                        .contentType(MediaType.APPLICATION_JSON_UTF8)
                         .content(new ObjectMapper().writeValueAsString(requestDto)))
                 .andExpect(status().isOk());
 
