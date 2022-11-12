@@ -2,7 +2,7 @@ package com.jojoldu.book.springboot.web;
 
 import com.jojoldu.book.springboot.config.auth.LoginUser;
 import com.jojoldu.book.springboot.config.auth.dto.SessionUser;
-import com.jojoldu.book.springboot.service.posts.PostsService;
+import com.jojoldu.book.springboot.service.PostsService;
 import com.jojoldu.book.springboot.web.dto.PostsResponseDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;

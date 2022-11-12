@@ -6,7 +6,7 @@ branches:
   only:
     - main
 
-# Travis CI 서버의 HOME
+# Travis CI 서버의 Home
 cache:
   directories:
     - '$HOME/.m2/repository'
@@ -24,8 +24,9 @@ before_deploy:
 
 deploy:
   - provider: s3
-    access_key_id: $AWS_ACCESS_KEY # Travis repo settings에 설정된 값
-    secret_access_key: $AWS_SECRET_KEY # Travis repo settings에 설정된 값
+    access_key_id: $AWS_ACCESS_KEY # Travis Repo Settings에 설정된 값
+    secret_access_key: $AWS_SECRET_KEY # Travis Repo Settings에 설정된 값
+
     bucket: book-springboot2-webservice
     region: ap-northeast-2
     skip_cleanup: true
@@ -34,7 +35,6 @@ deploy:
     wait-until-deployed: true
     on:
       branch: main
-
 
 
 # CI 실행 완료시 메일로 알람
